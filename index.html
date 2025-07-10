@@ -1,80 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Starluxe exclusive - Home</title>
+  <meta name="description" content="Starluxe Charter - Premium luxury coach transportation in South Africa. Executive travel with comfort, safety and reliability.">
+  <meta name="keywords" content="Affordable bus hire,South Africa transportation, charter buses, premium transport, airport transfers, affordable charter services">
+  <meta name="theme-color" content="#001a33">
+
+  <!-- (Social Media Sharing) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://starluxecharter.co.za/">
+  <meta property="og:title" content="Starluxe Charter | Luxury Coach Transportation">
+  <meta property="og:description" content="Premium executive travel across South Africa with luxury coaches and professional drivers.">
+  <meta property="og:image" content="https://starluxecharter.co.za/Gallery/social-preview.jpg">
+
+  <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Starluxe Charter | Luxury Coach Transportation">
+  <meta name="twitter:description" content="Premium executive travel across South Africa with luxury coaches and professional drivers.">
+  <meta name="twitter:image" content="https://starluxecharter.co.za/Gallery/social-preview.jpg">
+
+  <!-- Favicon Setup -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#001a33">
+  <meta name="msapplication-TileColor" content="#001a33">
+  <meta name="theme-color" content="#001a33">
+
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
+  <link rel="preload" href="Gallery/hero-bus.webp" as="image" media="(min-width: 768px)">
+
+  <!-- DNS Prefetch -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+  <title>Starluxe Charter - Luxury Coach Transportation</title>
+  <link rel="canonical" href="https://starluxecharter.co.za/" />
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
   <style>
-    :root {
-      --primary: #002244;
+:root {
+      --primary: #001a33;
       --accent: #FFD700;
-      --light-bg: #f5f7fa;
-      --text: #222222;
       --white: #ffffff;
+      --light-gray: #f8f9fa;
+      --dark-gray: #212529;
+      --text: #2d3748;
+      --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Arial', sans-serif;
     }
-    
+
     body {
-      background-color: var(--light-bg);
+      font-family: 'Manrope', sans-serif;
       color: var(--text);
+      background-color: var(--light-gray);
       line-height: 1.6;
+      overflow-x: hidden;
     }
-    
+
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    /* Header & Navigation */
     header {
-      background-color: var(--primary);
+      background-color: rgb(54, 69, 79);
       color: var(--white);
-      padding: 1rem 2rem;
-      position: sticky;
+      padding: 1.5rem 2rem;
+      position: fixed;
       top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      width: 100%;
+      z-index: 1000;
+      transition: var(--transition);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     }
-    
+
     .header-container {
-      max-width: 1200px;
+      max-width: 1400px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    
-    .logo-right {
-      font-size: 1.8rem;
-      font-weight: bold;
-      color: var(--accent);
-      height: 40px;
-      width: auto;
+
+    .logo {
+      height: 20px;
+      transition: var(--transition);
     }
-    
-    nav ul {
+
+    /* Desktop Navigation */
+    .desktop-nav ul {
       display: flex;
       list-style: none;
+      gap: 2rem;
     }
-    
-    nav ul li {
-      margin-left: 1.5rem;
-    }
-    
-    nav ul li a {
+
+    .desktop-nav a {
       color: var(--white);
       text-decoration: none;
       font-weight: 500;
-      padding: 0.5rem 0;
+      font-size: 1.05rem;
       position: relative;
-      transition: color 0.3s;
+      padding: 0.5rem 0;
+      transition: var(--transition);
     }
-    
-    nav ul li a:hover {
-      color: var(--accent);
-    }
-    
-    nav ul li a::after {
+
+    .desktop-nav a::after {
       content: '';
       position: absolute;
       width: 0;
@@ -82,351 +137,720 @@
       bottom: 0;
       left: 0;
       background-color: var(--accent);
-      transition: width 0.3s;
+      transition: var(--transition);
     }
-    
-    nav ul li a:hover::after {
+
+    .desktop-nav a:hover {
+      color: var(--accent);
+    }
+
+    .desktop-nav a:hover::after {
       width: 100%;
     }
-    
+
+    /* Mobile Navigation */
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      padding: 10px;
+      z-index: 1001;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 28px;
+      height: 2px;
+      background-color: var(--white);
+      margin: 6px 0;
+      transition: var(--transition);
+      transform-origin: center;
+    }
+
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      max-width: 320px;
+      height: 100vh;
+      background-color: var(--primary);
+      z-index: 1000;
+      padding: 6rem 2rem 2rem;
+      transition: var(--transition);
+      box-shadow: -5px 0 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .mobile-nav.active {
+      right: 0;
+    }
+
+    .mobile-nav ul {
+      list-style: none;
+    }
+
+    .mobile-nav li {
+      margin-bottom: 1.5rem;
+    }
+
+    .mobile-nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 500;
+      transition: var(--transition);
+      display: inline-block;
+    }
+
+    .mobile-nav a:hover {
+      color: var(--accent);
+      transform: translateX(5px);
+    }
+
+    /* Hero Section */
     .hero {
-      background: linear-gradient(rgba(0, 34, 68, 0.7), rgba(0, 34, 68, 0.7)), 
-                  url('Gallery/Starluxe\ bus.jpeg') no-repeat center center/cover;
-      height: 60vh;
+      position: relative;
+      height: 100vh;
+      min-height: 700px;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
       color: var(--white);
-      padding: 0 2rem;
+      overflow: hidden;
     }
-    
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+
+    .hero-image-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
-    
-    .hero p {
-      font-size: 1.2rem;
+
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 26, 51, 0.4);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
       max-width: 800px;
-      margin-bottom: 2rem;
+      padding: 0 2rem;
+      transform: translateY(20px);
     }
-    
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .hero {
+        min-height: 600px;
+        padding-top: 80px;
+      }
+      
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+    /* Button Styles */
     .btn {
       display: inline-block;
       background-color: var(--accent);
       color: var(--primary);
-      padding: 0.8rem 2rem;
+      padding: 1rem 2.5rem;
       border-radius: 50px;
       text-decoration: none;
-      font-weight: bold;
-      transition: all 0.3s;
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: var(--transition);
+      border: 2px solid transparent;
+      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
     }
-    
+
     .btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+      background-color: transparent;
+      color: var(--accent);
+      border-color: var(--accent);
     }
-    
-    .container {
-      max-width: 1200px;
+
+    /* Section Styling */
+    section {
+      padding: 6rem 2rem;
+      max-width: 1400px;
       margin: 0 auto;
-      padding: 4rem 2rem;
     }
-    
+
     .section-title {
       color: var(--primary);
-      font-size: 2.2rem;
-      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
       position: relative;
-      padding-bottom: 0.5rem;
+      display: inline-block;
     }
-    
+
     .section-title::after {
       content: '';
       position: absolute;
-      width: 80px;
+      width: 60%;
       height: 4px;
-      bottom: 0;
+      bottom: -10px;
       left: 0;
       background-color: var(--accent);
+      border-radius: 2px;
     }
-    
+
+   
+   
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            color:#001a33;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 20px;
+        }
+        
+        .service-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+            min-height: 350px;
+            color: white;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .card-content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 50%, transparent 100%);
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.4);
+            z-index: 1;
+        }
+
+    /* Features Section */
     .features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
       margin-top: 3rem;
     }
-    
+
     .feature-card {
       background-color: var(--white);
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      transition: transform 0.3s;
-    }
-    
-    .feature-card:hover {
-      transform: translateY(-10px);
-    }
-    
-    .feature-card h3 {
-      color: var(--primary);
-      margin-bottom: 1rem;
-    }
-    
-    .feature-icon {
-      font-size: 2.5rem;
-      color: var(--accent);
-      margin-bottom: 1rem;
-    }
-    
-    footer {
-      background-color: var(--primary);
-      color: var(--white);
-      padding: 3rem 2rem;
+      padding: 2.5rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+      transition: var(--transition);
       text-align: center;
     }
-    
-    .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      text-align: left;
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
     }
-    
-    .footer-column h3 {
+
+    .feature-icon {
+      font-size: 2.8rem;
       color: var(--accent);
       margin-bottom: 1.5rem;
-      font-size: 1.2rem;
     }
-    
-    .footer-column ul {
-      list-style: none;
+
+    .feature-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
     }
-    
-    .footer-column ul li {
-      margin-bottom: 0.8rem;
-    }
-    
-    .footer-column ul li a {
-      color: var(--white);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    
-    .footer-column ul li a:hover {
-      color: var(--accent);
-    }
-    
-    .social-links {
-      display: flex;
-      justify-content: center;
-      margin-top: 2rem;
-    }
-    
-    .social-links a {
-      color: var(--white);
-      font-size: 1.5rem;
-      margin: 0 1rem;
-      transition: color 0.3s;
-    }
-    
-    .social-links a:hover {
-      color: var(--accent);
-    }
-    
-    .copyright {
-      margin-top: 2rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(255,255,255,0.1);
-    }
-    
-    /* About Page Specific Styles */
-    .about-page {
+
+    /* About Section */
+    .about-content {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 3rem;
+      gap: 4rem;
       align-items: center;
+      margin-top: 3rem;
     }
-    
+
     .about-image {
-      border-radius: 8px;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      transition: var(--transition);
     }
-    
+
+    .about-image:hover {
+      transform: scale(1.02);
+    }
+
     .about-image img {
       width: 100%;
       height: auto;
       display: block;
     }
-    
-    .mission-values {
-      margin-top: 3rem;
+    .read-more-btn{
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 25px;
+      background-color: gold;
+      border-radius: 20px;
     }
-    
+
+    .about-text p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    /* Mission Values */
+    .mission-values {
+      margin-top: 2rem;
+    }
+
     .value-card {
       background-color: var(--white);
-      padding: 1.5rem;
-      border-radius: 8px;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    }
-    
-    
-    /* Services Page Specific Styles */
-    .service-card {
-      background-color: var(--white);
       padding: 2rem;
-      border-radius: 8px;
-      margin-bottom: 2rem;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      margin-top: 4rem;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+      transition: var(--transition);
     }
-    
-    .service-card h3 {
+
+    .value-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .value-card h4 {
+      font-size: 1.3rem;
       color: var(--primary);
       margin-bottom: 1rem;
     }
-    
-    /* Fleet Page Specific Styles */
+
+    /* Fleet Section */
+    .fleet-section {
+      background-color: var(--white);
+      border-radius: 16px;
+      padding: 4rem;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    }
+
+    .search-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      background: var(--light-gray);
+      border-radius: 50px;
+      padding: 0.6rem 1.5rem;
+      width: 300px;
+      transition: var(--transition);
+    }
+
+    .search-bar:focus-within {
+      box-shadow: 0 0 0 2px var(--accent);
+    }
+
+    .search-bar input {
+      border: none;
+      outline: none;
+      flex: 1;
+      padding: 0.5rem;
+      font-family: inherit;
+      background: transparent;
+    }
+
     .fleet-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
       gap: 2rem;
     }
-    
-    .fleet-card {
-      background-color: var(--white);
-      border-radius: 8px;
+
+    .vehicle-card {
+      background: var(--white);
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      transition: var(--transition);
     }
-    
-    .fleet-image {
+
+    .vehicle-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .slideshow-container {
+      position: relative;
       height: 250px;
-      overflow: hidden;
     }
-    
-    .fleet-image img {
+
+    .slide {
+      display: none;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.5s;
     }
-    
-    .fleet-card:hover .fleet-image img {
-      transform: scale(1.05);
+
+    .slide.active {
+      display: block;
     }
-    
-    .fleet-info {
-      padding: 1.5rem;
-    }
-    
-    .fleet-info h3 {
-      color: var(--primary);
-      margin-bottom: 1rem;
-    }
-    
-    .fleet-info ul {
-      margin-top: 1rem;
-      padding-left: 1.5rem;
-    }
-    
-    .fleet-info ul li {
-      margin-bottom: 0.5rem;
-    }
-    
-    /* Contact Page Specific Styles */
-    .contact-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-    }
-    
-    .contact-info {
-      background-color: var(--white);
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    }
-    
-    .contact-info h3 {
-      color: var(--primary);
-      margin-bottom: 1.5rem;
-    }
-    
-    .contact-item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 1.5rem;
-    }
-    
-    .contact-icon {
-      font-size: 1.5rem;
-      color: var(--accent);
-      margin-right: 1rem;
+
+    .slide-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
       width: 40px;
       height: 40px;
-      background-color: rgba(0, 34, 68, 0.1);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+      z-index: 10;
     }
-    
-    .contact-form {
-      background-color: var(--white);
+
+    .slide-nav:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .prev {
+      left: 15px;
+    }
+
+    .next {
+      right: 15px;
+    }
+
+    .dots-container {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .dot.active {
+      background: var(--accent);
+    }
+
+    .vehicle-content {
       padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     }
-    
-    .form-group {
+
+    .vehicle-title {
+      color: var(--primary);
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .vehicle-features {
+      padding-left: 1.2rem;
+      margin: 1rem 0;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .vehicle-features li {
+      margin-bottom: 0.5rem;
+    }
+
+    .quote-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--primary);
+      padding: 0.8rem 1.8rem;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 1.5rem;
+      transition: var(--transition);
+      border: 2px solid transparent;
+    }
+
+    .quote-btn:hover {
+      background: transparent;
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+  .loadmore {
+    display: inline-block;
+      background-color: var(--accent);
+      color: var(--primary);
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: var(--transition);
+      border: 2px solid transparent;
+      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    }
+  
+  
+.loadmore-btn:hover {
+      background: transparent;
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+
+    /* Contact Section */
+    .contact-section {
+      background: linear-gradient(rgba(0, 26, 51, 0.9), rgba(0, 26, 51, 0.9)), 
+                  url('Gallery/contact\ bus.jfif') no-repeat center center/cover;
+      color: var(--white);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      padding: 5rem;
+    }
+
+    .contact-info {
+      padding-right: 2rem;
+    }
+
+    .contact-info h2 {
+      color: var(--white);
+      margin-bottom: 2rem;
+    }
+
+    .contact-info p {
+      margin-bottom: 2rem;
+      opacity: 0.9;
+      line-height: 1.7;
+    }
+
+    .contact-details {
+      margin-top: 3rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
       margin-bottom: 1.5rem;
     }
-    
+
+    .contact-icon {
+      font-size: 1.5rem;
+      margin-right: 1.5rem;
+      color: var(--accent);
+    }
+
+    .contact-form {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      
+    }
+
+    .form-group {
+      margin-bottom: 1.8rem
+    }
+
     .form-group label {
       display: block;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.8rem;
       font-weight: 500;
+      color: var(--primary);
     }
-    
+
     .form-group input,
     .form-group textarea,
     .form-group select {
       width: 100%;
-      padding: 0.8rem;
+      padding: 1rem;
       border: 1px solid #ddd;
-      border-radius: 4px;
+      border-radius: 8px;
+      font-family: inherit;
       font-size: 1rem;
+      transition: var(--transition);
     }
-    
-    .form-group textarea {
-      height: 150px;
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.3);
     }
-    
-    .submit-btn {
+
+    /* Footer */
+    footer {
+      background-color:rgb(54, 69, 79) ;
+      color: var(--white);
+      padding: 5rem 2rem 3rem;
+    }
+
+    .footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+    }
+
+    .footer-logo {
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-logo img {
+      height: 50px;
+    }
+
+    .footer-about p {
+      margin-bottom: 1.5rem;
+      opacity: 0.8;
+      line-height: 1.7;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      transition: var(--transition);
+    }
+
+    .social-link:hover {
       background-color: var(--accent);
       color: var(--primary);
-      border: none;
-      padding: 0.8rem 2rem;
-      border-radius: 50px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-    
-    .submit-btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
-    
+
+    .footer-links h3 {
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      font-size: 1.3rem;
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+      padding-left: 5px;
+    }
+
+    .copyright {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      opacity: 0.7;
+    }
+
     /* Responsive Styles */
+    @media (max-width: 1200px) {
+      .hero h1 {
+        font-size: 3rem;
+      }
+      
+      .contact-container {
+        padding: 4rem;
+      }
+    }
+
     @media (max-width: 992px) {
       .about-content,
       .contact-container {
@@ -436,469 +860,1000 @@
       .about-image {
         order: -1;
       }
+      
+      .contact-info {
+        padding-right: 0;
+        margin-bottom: 3rem;
+      }
     }
-    
+
     @media (max-width: 768px) {
-      .header-container {
-        flex-direction: column;
+      .desktop-nav {
+        display: none;
       }
-      
-      .logo {
-        margin-bottom: 1rem;
+
+      .hamburger {
+        display: block;
       }
-      
-      nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
+
+      .hero {
+        min-height: 600px;
+        background-size: contain;
+        background-position: top center;
+        background-repeat: no-repeat;
+        height: auto;
+        padding-top: 20%;
       }
-      
-      nav ul li {
-        margin: 0.5rem;
-      }
-      
+
       .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
       }
-      
+
       .hero p {
-        font-size: 1rem;
+        font-size: 1.1rem;
       }
-    }
-    
-    @media (max-width: 576px) {
-      .container {
-        padding: 3rem 1rem;
-      }
-      
+
       .section-title {
-        font-size: 1.8rem;
+        font-size: 2rem;
       }
-      
+
+      .fleet-section {
+        padding: 3rem 2rem;
+      }
+
+      .search-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+      }
+
+      .search-bar {
+        width: 100%;
+      }
+
       .fleet-grid {
         grid-template-columns: 1fr;
       }
+
+      .contact-container {
+        padding: 3rem 2rem;
+      }
     }
 
+    @media (max-width: 576px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      section {
+        padding: 4rem 1.5rem;
+      }
+
+      .feature-card {
+        padding: 2rem 1.5rem;
+      }
+
+      .contact-form {
+        padding: 2rem 1.5rem;
+      }
+    }
+    .trusted-brands {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            color: #222;
+            margin-bottom: 10px;
+        }
+        
+        .section-subtitle {
+            color: #666;
+            margin-bottom: 40px;
+        }
+        
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        
+        .brands-carousel {
+            display: flex;
+            gap: 40px;
+            animation: scroll 20s linear infinite;
+        }
+        
+        .brand-logo {
+            width: 150px;
+            height: 80px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s;
+        }
+        
+        .brand-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+        
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-150px * 6 - 40px * 5)); }
+        }
+        
+        .carousel-container:hover .brands-carousel {
+            animation-play-state: paused;
+        }
 
   </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap">
+  </noscript>
 </head>
 <body>
-  <!-- Home Page -->
-  <div id="home-page">
-    <header>
-      <div class="header-container">
- 
-       <img src="Gallery/starluxe logo.jpeg" alt="Logo" class="logo-right"/>
-        <nav>
-          <ul>
-            <li><a href="#home-page">Home</a></li>
-            <li><a href="#about-page">About</a></li>
-            <li><a href="#services-page">Services</a></li>
-            <li><a href="#fleet-page">Our Fleet</a></li>
-            <li><a href="#contact-page">Contact</a></li>
-          </ul>
-        </nav>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="Gallery/starluxe logo.jpeg"loading="lazy" alt="Starluxe Exclusive Logo" height="40px">
       </div>
-    </header>
-
-    <section class="hero">
-      <h1>Premium Coach Transportation</h1>
-      <p>Experience luxury travel with Starluxe exclusive coaches - your trusted partner for executive transportation across South Africa</p>
-      <a href="#contact-page" class="btn">Book Your Journey</a>
-    </section>
-
-    <section class="container">
-      <h2 class="section-title">Why Choose Starluxe exclusive coaches</h2>
-      <div class="features">
-        <div class="feature-card">
-          <div class="feature-icon">🚌</div>
-          <h3>Luxury Fleet</h3>
-          <p>Our modern coaches are equipped with premium amenities to ensure your comfort throughout the journey.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">⭐</div>
-          <h3>Experienced Drivers</h3>
-          <p>Professional, certified drivers with extensive knowledge of South African routes and destinations.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🔒</div>
-          <h3>Safety First</h3>
-          <p>Rigorous maintenance schedules and safety protocols to ensure worry-free travel for all passengers.</p>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="footer-content">
-        <div class="footer-column">
-          <h3>Starluxe exclusive</h3>
-          <p>Premium coach transportation services across South Africa, offering comfort, safety and reliability.</p>
-        </div>
-        <div class="footer-column">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="#home-page">Home</a></li>
-            <li><a href="#about-page">About Us</a></li>
-            <li><a href="#services-page">Our Services</a></li>
-            <li><a href="#fleet-page">Our Fleet</a></li>
-            <li><a href="#contact-page">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Contact Info</h3>
-          <ul>
-            <li>📞 083 658 9647</li>
-            <li>✉️ bookings@starluxe.co.za</li>
-            <li>📍Farm 316 Olifantsvlei, misgund 
-              Lenasia Road R554 
-              EIKENHOF 1872</li>
-          </ul>
-        </div>
-      </div>
-     
-      <div class="copyright">
-        <p>&copy; Starluxe exclusive. All rights reserved.</p>
-      </div>
-    </footer>
-  </div>
-
-  <!-- About Page -->
-  <div id="about-page" style="display: none;">
-    <header>
-      <div class="header-container">
-        
-       <img src="Gallery/starluxe logo.jpeg" alt="Logo" class="logo-right"/>
       
-        <nav>
-          <ul>
-            <li><a href="#home-page">Home</a></li>
-            <li><a href="#about-page">About</a></li>
-            <li><a href="#services-page">Services</a></li>
-            <li><a href="#fleet-page">Our Fleet</a></li>
-            <li><a href="#contact-page">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <section class="container">
-      <h2 class="section-title">About Starluxe exclusive</h2>
-      <div class="about-page">
-        <div class="about-text">
-          <p>Starluxe exclusive emerged from the transformation of Eldo Coaches during the challenging times of the COVID-19 pandemic. What began as a necessity became an opportunity to redefine luxury transportation in South Africa.</p>
-          <p>Today, we stand as a testament to resilience and innovation in the coach travel industry, combining decades of experience with a fresh approach to customer service.</p>
-          <p>As a 100% Black-owned enterprise operating under the esteemed David Bus Services (established in 1956), we bring together tradition and modernity to create exceptional travel experiences.</p>
-        </div>
-        <div class="about-image">
-          <img src="Gallery/Starluxe bus.jpeg" alt="Starluxe coach">
-        </div>
-      </div>
-
-      <div class="mission-values">
-        <h3 class="section-title">Our Mission & Values</h3>
-        <div class="value-card">
-          <h4>Excellence in Service</h4>
-          <p>We go beyond transportation to create memorable experiences for every passenger, with attention to detail that sets us apart.</p>
-        </div>
-        <div class="value-card">
-          <h4>Commitment to Safety</h4>
-          <p>Our rigorous maintenance programs and driver training ensure that safety is never compromised.</p>
-        </div
-        <div class="value-card">
-          <h4>Community Impact</h4>
-          <p>As a Level 1 BBBEE certified company, we're proud to contribute to South Africa's economic transformation.</p>
-        </div>
-      </div>
-    </section>
-  
-     
-
-
-  <div id="services-page" style="display: none;">
-    <header>
-      <div class="header-container">
-        <img src="Gallery/starluxe logo.jpeg" alt="Logo" class="logo-right"/>
-        <nav>
-          <ul>
-            <li><a href="#home-page">Home</a></li>
-            <li><a href="#about-page">About</a></li>
-            <li><a href="#services-page">Services</a></li>
-            <li><a href="#fleet-page">Our Fleet</a></li>
-            <li><a href="#contact-page">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <section class="container">
-      <h2 class="section-title">Our Services</h2>
-      <p>Starluxe exclusive offers comprehensive transportation solutions tailored to meet diverse needs across South Africa.</p>
-      
-      <div class="service-card">
-        <h3>Airport & Hotel Transfers</h3>
-        <p>Seamless transportation to and from major airports and hotels, with meet-and-greet services available upon request. Our drivers monitor flight schedules to accommodate delays.</p>
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav">
         <ul>
-          <li>OR Tambo International Airport</li>
-          <li>Cape Town International Airport</li>
-          <li>King Shaka International Airport</li>
-          <li>All major hotel chains and conference centers</li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#fleet">Fleet</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-      </div>
+      </nav>
       
-      <div class="service-card">
-        <h3>Corporate Event Transportation</h3>
-        <p>Reliable group transportation for corporate events, conferences, and team building activities. We offer customized schedules and branded vehicles for your company.</p>
-        <ul>
-          <li>Executive shuttle services</li>
-          <li>Multi-day event transportation</li>
-          <li>Dedicated vehicles with WiFi</li>
-          <li>Customized routing</li>
-        </ul>
-      </div>
-      
-      <div class="service-card">
-        <h3>Wedding & Special Occasion Charters</h3>
-        <p>Make your special day unforgettable with our luxury wedding transportation. We coordinate with event planners to ensure perfect timing and elegant arrivals.</p>
-        <ul>
-          <li>Bridal party transportation</li>
-          <li>Guest shuttles</li>
-          <li>Decorated vehicles</li>
-          <li>Professional, discreet drivers</li>
-        </ul>
-      </div>
-      
-      <div class="service-card">
-        <h3>Tour Group Transportation</h3>
-        <p>Explore South Africa in comfort with our tour group services. We work with tour operators to provide knowledgeable drivers and comfortable coaches for extended journeys.</p>
-        <ul>
-          <li>Customized itineraries</li>
-          <li>Luggage handling</li>
-          <li>Multilingual drivers available</li>
-          <li>Nationwide coverage</li>
-        </ul>
-      </div>
-    </section>
+  <!-- Mobile menu button -->
+<button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav">
+  <span aria-hidden="true"></span>
+  <span aria-hidden="true"></span>
+  <span aria-hidden="true"></span>
+</button>
 
-    <footer>
-  
-    </footer>
-  </div>
 
- 
-  <div id="fleet-page" style="display: none;">
-    <header>
-      <div class="header-container">
-
-        <img src="Gallery/starluxe logo.jpeg" alt="Logo" class="logo-right"/>
-        <nav>
-          <ul>
-            <li><a href="#home-page">Home</a></li>
-            <li><a href="#about-page">About</a></li>
-            <li><a href="#services-page">Services</a></li>
-            <li><a href="#fleet-page">Our Fleet</a></li>
-            <li><a href="#contact-page">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <section class="container">
-      <h2 class="section-title">Our Luxury Fleet</h2>
-      <p>Each vehicle in our fleet is meticulously maintained and equipped with premium amenities to ensure your comfort and safety.</p>
-      
-      <div class="fleet-grid">
-        <div class="fleet-card">
-          <div class="fleet-image">
-            <img src="Gallery/HIGER (3).jpg" alt="39-Seater Luxury Coach">
-          </div>
-          <div class="fleet-info">
-            <h3>39-Seater Luxury Coach</h3>
-            <p>Perfect for executive groups and premium tours, offering intimate luxury with full amenities.</p>
-            <ul>
-              <li>Reclining leather seats with extra legroom</li>
-              <li>Individual climate controls</li>
-              <li>Onboard entertainment system</li>
-              <li>USB charging ports at every seat</li>
-              <li>Onboard restroom facilities</li>
-              <li>Ample luggage capacity</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="fleet-card">
-          <div class="fleet-image">
-            <img src="Gallery/Starluxe bus.jpeg" alt="52-Seater Super Luxury Coach">
-          </div>
-          <div class="fleet-info">
-            <h3>52-Seater Super Luxury Coach</h3>
-            <p>Our flagship model for large groups who refuse to compromise on comfort.</p>
-            <ul>
-              <li>Executive leather seating with 120° recline</li>
-              <li>Advanced air suspension system</li>
-              <li>Dual USB/power ports per seat</li>
-              <li>Onboard refrigerator and refreshment center</li>
-              <li>Premium sound system with noise cancellation</li>
-              <li>Privacy curtains and mood lighting</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="fleet-card">
-          <div class="fleet-image">
-            <img src="Gallery/65 seater.jfif" alt="65-Seater Executive Coach">
-          </div>
-          <div class="fleet-info">
-            <h3>65-Seater Executive Coach</h3>
-            <p>High-capacity comfort for large groups, school trips, and corporate events.</p>
-            <ul>
-              <li>Spacious reclining seats with adjustable headrests</li>
-              <li>Full climate control system</li>
-              <li>Overhead storage compartments</li>
-              <li>Multiple USB charging stations</li>
-              <li>Onboard PA system</li>
-              <li>Safety monitoring cameras</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-  
-    </footer>
-  </div>
-
-  
-  <div id="contact-page" style="display: none;">
-    <header>
-      <div class="header-container">
     
-        <img src="Gallery/starluxe logo.jpeg" alt="Logo" class="logo-right"/>
-        <nav>
-          <ul>
-            <li><a href="#home-page">Home</a></li>
-            <li><a href="#about-page">About</a></li>
-            <li><a href="#services-page">Services</a></li>
-            <li><a href="#fleet-page">Our Fleet</a></li>
-            <li><a href="#contact-page">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#fleet">Our Fleet</a></li>
+        <li><a href="#contact">Contact</a></li>
+       
+      </ul>
+    </nav>
+  </header>
 
-    <section class="container">
-      <h2 class="section-title">Contact Us</h2>
-      <p>Ready to book your journey or have questions about our services? Our team is here to assist you.</p>
-      
-      <div class="contact-container">
-        <div class="contact-info">
-          <h3>Contact Information</h3>
-          
+  <!-- Hero Section -->
+
+  <section id="home" class="hero">
+    <div class="hero-image-container">
+      <picture>
+        <source srcset="Gallery/BUS (2).webp" type="image/webp">
+        <source srcset="Gallery/BUS (2).jpg" type="image/jpeg">
+        <img src="Gallery/BUS (2).jpeg" 
+             alt="Luxury coach with premium seating and panoramic windows" 
+             class="hero-image" 
+             loading="lazy" 
+             width="1920" 
+             height="1080">
+      </picture>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content" data-aos="fade-up" data-aos-delay="300">
+      <h1>Premium Coach Transportation</h1>
+      <p>Experience luxury travel with starLuxe coaches - your trusted partner for executive transportation across South Africa</p>
+      <a href="#contact" class="btn">Get a Quote</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" data-aos="fade-up">
+    <h2 class="section-title">Why Choose StarLuxe</h2>
+    <div class="features">
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-icon">🚌</div>
+        <h3>Luxury Fleet</h3>
+        <p>Our modern coaches feature premium amenities for maximum comfort throughout your journey.</p>
+      </div>
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature-icon">⭐</div>
+        <h3>Experienced Drivers</h3>
+        <p>Professional, certified drivers with extensive knowledge of South African routes.</p>
+      </div>
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="feature-icon">💰</div>
+        <h3>Affordable Excellence</h3>
+        <p>Quality transport that fits your budget we deliver,reliable service at competitive rates without competitive rates without compromising on comfort or maintenance</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" data-aos="fade-up">
+    <h2 class="section-title">Our Story</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>After decades of growth as Eldo Coaches, our exciting rebrand marks a new chapter. This is how Starluxe Executive emerged as an independent, stand-alone brand.</p>
+        <p>The COVID-19 pandemic sparked a radical shift in our decades-old model. Embracing uncertainty, we departed from tradition while upholding our timeless principles.</p>
+        <p>Anticipating future needs, we forged ahead, embracing discomfort to innovate and create the unprecedented. This transformative  journey harnessed partnerships and solidifying us as pioneers in the executive coach and charter passenger transport industry.
+        <p>We evolved from crisis to reinvention, providing that  embracing change and daring to innovate leads to success.We remain deeply committed to all we serve and look forward to transporting our clients as "StarLuxe executive. "
+        </p>
+      <a href="Our legacy.html" class="read-more-btn">Read Full Story</a>
+      </div>
+      <div class="about-image" data-aos="fade-left">
+        <img src="Gallery/dRIVERS.jpg"loading="lazy" alt="Our Professional Drivers">
+      </div>
+    </div>
+
+    <div class="mission-values">
+      <h3 class="section-title">Our Values</h3>
+      </div>
+      <div class="value-card" data-aos="fade-up">
+        <h4>Excellence in Service</h4>
+        <p>We create memorable experiences with attention to detail that sets us apart in the transportation industry.</p>
+      </div>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+        <h4>Commitment to Safety</h4>
+        <p>Rigorous maintenance programs and driver training ensure safety is never compromised.</p>
+      </div>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+        <h4>Community Impact</h4>
+        <p>As a Level 1 BBBEE certified company, we're proud to contribute to South Africa's economic transformation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" data-aos="fade-up">
+    <h2 class="section-title">Our Services</h2>
+  </div>
+  <div class="services-grid">
+      <div class="service-card" style="background-image: url('Gallery/pexels-gustavo-fring-4173222.webp');">
+          <div class="card-content">
+              <h2>AIRPORT/HOTEL TRANSFERS</h2>
+              <p>Seamless private transfers with meet & greet, airport to hotel, or a shopping trip to the mall in luxury sedans,SUVs,or spacious vans.</p>
+          </div>
+      </div>
+      <div class="service-card" style="background-image: url('Gallery/pexels-bruno-henrique-1595599448-29510192.jpg');">
+        <div class="card-content">
+            <h2>GROUP TRANSFERS</h2>
+            <p>Our semi luxury and commuter coaches are a fleet of well maintained, safe, comfortable and reliable vehicles. these caoches are ideal for school trips, events, corporate, & funerals. </p>
+        </div>
+    </div> 
+    <div class="service-card" style="background-image: url('Gallery/pexels-pavel-danilyuk-7594130.jpg');"">
+      <div class="card-content">
+          <h2>CHAUFFEUR SERVICES</h2>
+          <p>Travel in refined comfort, our certified chauffeurs provide discreet,tailored service for business meetings, events, or leisure excursion.</p>
+      </div>
+  </div> 
+ </section>
+
+  <!-- Fleet Section -->
+<section id="fleet" class="fleet-section" data-aos="fade-up">
+  <h2 class="section-title">Our Luxury Fleet</h2>
+  
+  <div class="search-container">
+    <h3>Find Your Perfect Vehicle</h3>
+    <div class="search-bar">
+      <input type="text" id="vehicleSearch" placeholder="Search vehicles...">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+  
+  <div class="fleet-grid" id="fleetGrid">
+    <div class="vehicle-card" data-aos="fade-up">
+      <div class="slideshow-container">
+        <button class="slide-nav prev">&lt;</button>
+        <img class="slide active" src="Gallery/g7.jpg" loading="lazy"alt="Mercedes Sprinter">
+        <img class="slide" src="Gallery/G7 INTERIOR.jfif"loading="lazy" alt="Interior">
+        <img class="slide" src="Gallery/toilet.jpg"loading="lazy" alt="Seats">
+        <img class="slide" src="Gallery/charging ports.jpg"loading="lazy" alt="Charging Ports">
+        <button class="slide-nav next">&gt;</button>
+        <div class="dots-container">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+      <div class="vehicle-content">
+        <h3 class="vehicle-title">Large Buses</h3>
+        <ul class="vehicle-features">
+          <strong>Vehicles:</strong>
+          <li>52-seater</li>
+          <li>60-seater</li>
+          <li>65-seater</li>
+          <strong>Features:</strong>
+          <li>on-board fridge cooler & on-board toilet(model dependent)</li>
+        
+          <li>Individual high-back, adjustable/ reclining/ leather or upholstery seates(model dependent)</li>
+          <li>USB charging points</li>
+        </ul>
+        <a href="#contact" class="quote-btn">Request Quote</a>
+      </div>
+    </div>
+    
+    <div class="vehicle-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="slideshow-container">
+        <button class="slide-nav prev">&lt;</button>
+        <img class="slide active" src="Gallery/7 seater.jpeg"loading="lazy" alt="Luxury Minibus">
+        <img class="slide" src="Gallery/VW KOMBI INTERIOR.jfif"loading="lazy" alt="Interior">
+        <img class="slide" src="Gallery/VW KOMBI.jfif"loading="lazy" alt="Seats">
+        <button class="slide-nav next">&gt;</button>
+        <div class="dots-container">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+      <div class="vehicle-content">
+        <h3 class="vehicle-title">Mini Buses</h3>
+        <ul class="vehicle-features">
+          <strong>Vehicles</strong>
+          <li>14-Seater</li>
+          <li>22-Seater</li>
+          <li>7-Seater</li>
+          <strong>Features:</strong>
+          <li>Tow bar</li>
+          <li>Luxury leather seating</li>
+          <li>Entertainment system</li>
+        </ul>
+        <a href="#contact" class="quote-btn">Request Quote</a>
+      </div>
+    </div>
+    
+    <div class="vehicle-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="slideshow-container">
+        <button class="slide-nav prev">&lt;</button>
+        <img class="slide active" src="Gallery/36 AND 39 SEATER.jpg"loading="lazy" alt="Luxury Coach">
+        <img class="slide" src="Gallery/39 seater charging ports.jpg" loading="lazy"alt="Seats">
+        <img class="slide" src="Gallery/39 seater inside.jpg"loading="lazy" alt="Restroom">
+     
+        <button class="slide-nav next">&gt;</button>
+        <div class="dots-container">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+     
+        </div>
+      </div>
+      <div class="vehicle-content">
+        <h3 class="vehicle-title">Mid-Size Buses </h3>
+        <strong>Vehicles:</strong>
+        <li>36-seater</li>
+        <li>39-seater</li>
+        <ul class="vehicle-features">
+          <strong>Features:</strong>
+          <li>USB charging ports </li>
+          <li>Spacious reclining seats</li>
+          <li>Onboard restroom</li>
+        </ul>
+        <a href="#contact" class="quote-btn">Request Quote</a>
+      </div>
+    </div>
+
+    <div class="vehicle-card additional-vehicle"style= "display:none;">
+      <div class="slideshow-container">
+        <button class="slide-nav prev">&lt;</button>
+        <img class="slide active" src="Gallery/SEDANS.jpeg"loading="lazy" alt="Luxury Van">
+        <img class="slide" src="Gallery/interior sedan (1).jpg"loading="lazy" alt="Interior">
+        <button class="slide-nav next">&gt;</button>
+        <div class="dots-container">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+      <div class="vehicle-content">
+        <h3 class="vehicle-title">Sedans</h3>
+        <strong>Vehicles:</strong>
+        <li>Almera sedans</li>
+        <ul class="vehicle-features">
+          <strong>Features:</strong>
+          <li>Air Conditioning</li>
+          <li>Cloth seats</li>
+          <li>Seat belts</li>
+          <li>Electric windows</li>
+        </ul>
+        <a href="#contact" class="quote-btn">Request Quote</a>
+      </div>
+    </div>
+    
+    <div class="vehicle-card additional-vehicle"style="display:none">
+      <div class="slideshow-container">
+        <button class="slide-nav prev">&lt;</button>
+        <img class="slide active" src="Gallery/c-class 2.jpg"loading="lazy" alt="Luxury Sedan">
+        <img class="slide" src="Gallery/c-class.jpg"loading="lazy" alt="Interior">
+        <button class="slide-nav next">&gt;</button>
+        <div class="dots-container">
+          <span class="dot active"></span>
+          <span class="dot"></span> 
+        </div>
+      </div>
+  
+
+      <div class="vehicle-content">
+        <h3 class="vehicle-title">Special Request/VIP</h3>
+        <strong>Vehicles:</strong>
+        <li>Mercedes Benz C-Class</li>
+        <ul class="vehicle-features">
+          <strong>Services</strong>
+          <li>tour guides</li>
+          <li>Trails</li>
+          <li>VIP armoured vehicles</li>
+          <li>Chauffeur services</li>
+          <li>Super luxe vehicles</li>
+        </ul>
+        <a href="#contact" class="quote-btn">Request Quote</a>
+      </div>
+    </div>
+    
+    
+  
+  <div class="load-more">
+    <button id="seeMoreBtn" class="btn">See More Vehicles</button>
+  </div>
+</section>
+
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section" data-aos="fade-up">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Get In Touch</h2>
+        <p>Ready to book your journey or have questions about our services? Our team is here to assist you with all your luxury transportation needs.</p>
+        
+        <div class="contact-details">
           <div class="contact-item">
             <div class="contact-icon">📞</div>
             <div>
               <h4>Phone</h4>
-              <p>083 658 9647</p>
-            
+              <a href="tel:0836589674">083 658 9674</a>
             </div>
           </div>
-          
           <div class="contact-item">
             <div class="contact-icon">✉️</div>
             <div>
               <h4>Email</h4>
-              <p>bookings@starluxe.co.za</p>
+              <a href="mailto:bookings@starluxe.co.za">Bookings@starluxe.co.za</a>
             </div>
           </div>
-          
           <div class="contact-item">
             <div class="contact-icon">📍</div>
             <div>
-              <h4>Office Address</h4>
-              <p>Farm 316 Olifantsvlei, misgund 
-                Lenasia Road R554 
-                EIKENHOF 1872</p>
-              <p>Johannesburg, 2000</p>
-              <p>South Africa</p>
+              <h4>Address</h4>
+              <a href="https://www.google.com/maps/search/Farm+316+Olifantsvlei,+Lenasia+Road+R554,+EIKENHOF+1872/">Farm 316 Olifantsvlei, Lenasia Road R554, EIKENHOF 1872</a>
             </div>
           </div>
-          
-          <div class="contact-item">
-            <div class="contact-icon">🕒</div>
-            <div>
-              <h4>Operating Hours</h4>
-              <p>Monday-Friday: 7:00 AM - 7:00 PM</p>
-              <p>Saturday: 8:00 AM - 5:00 PM</p>
-              <p>Sunday: 9:00 AM - 3:00 PM</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="contact-form">
-          <h3>Send Us a Message</h3>
-          <form>
-            <div class="form-group">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" required>
-            </div>
-            
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" required>
-            </div>
-            
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone">
-            </div>
-            
-            <div class="form-group">
-              <label for="service">Service Interested In</label>
-              <select id="service">
-                <option value="">Select a service</option>
-                <option value="airport">Airport Transfers</option>
-                <option value="corporate">Corporate Transportation</option>
-                <option value="wedding">Wedding Services</option>
-                <option value="tours">Tour Group Transportation</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            
-            <div class="form-group">
-              <label for="message">Your Message</label>
-              <textarea id="message" required></textarea>
-            </div>
-            
-            <button type="submit" class="submit-btn">Send Message</button>
-          </form>
         </div>
       </div>
-    </section>
+      
+      <div class="contact-form">
+        <form id="contactForm" action="https://formspree.io/f/mpwrgbnj" method="POST">
+          <input type="text" name="_gotcha" style="display:none">
+          <input type="hidden" name="_subject" value="New Booking Inquiry - Starluxe Charter">
+          <input type="hidden" name="_replyto" value="bookings@starluxe.co.za">
+          
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="service">Service Needed</label>
+            <select id="service" name="service" required>
+              <option value="">Select a service</option>
+              <option value="Large Buses">Large Buses (52/60/65-seater)</option>
+              <option value="Mini Buses">Mini Buses (7/14/22-seater)</option>
+              <option value="Mid-Size Buses">Mid-Size Buses (36/39-seater)</option>
+              <option value="Sedans">Almera Sedans</option>
+              <option value="Special Request">Special Request/VIP</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="passengers">Number of Passengers</label>
+            <input type="number" id="passengers" name="passengers" min="1">
+          </div>
+          
+          <div class="form-group">
+            <label for="event-date">Event Date (if applicable)</label>
+            <input type="date" id="event-date" name="event_date">
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          
+          <button type="submit" class="btn">Send Message</button>
+          <div id="form-status" style="margin-top: 15px;"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+    
+  <section class="trusted-brands">
+    <h2 class="section-title">Trusted by Leading Brands</h2>
+    <p class="section-subtitle">We partner with the best to deliver outstanding results</p>
+    
+    <div class="carousel-container">
+        <div class="brands-carousel">
+            <img src="Gallery/african_link_travel_logo.jfif"loading="lazy" alt="Apple" class="brand-logo">
+            <img src="Gallery/arab embassy logo.jfif"loading="lazy" alt="Google" class="brand-logo">
+            <img src="Gallery/gearhouse.jfif"loading="lazy" alt="Microsoft" class="brand-logo">
+            <img src="Gallery/COSAFA-logo.png"loading="lazy" alt="Amazon" class="brand-logo">
+            <img src="Gallery/sebaka logo.webp"loading="lazy" alt="Tesla" class="brand-logo">
 
-    <footer>
+            <!--loop -->
+            <img src="Gallery/fli afrika.jfif"loading="lazy" alt="Apple" class="brand-logo">
+            <img src="Gallery/one_above_global_dmc_logo.jfif"loading="lazy" alt="Google" class="brand-logo">
+            <img src="Gallery/sundowns.jfif"loading="lazy" alt="Microsoft" class="brand-logo">
+        </div>
+    </div>
+</section>
 
-    </footer>
-  </div>
+  
+  <footer>
+    <div class="footer-content">
+      <div class="footer-about">
+        <div class="footer-logo">
+          <img src="Gallery/starluxe logo.jpeg"loading="lazy" alt="Starluxe Exclusive">
+        </div>
+        <p>Premium coach transportation services across South Africa, offering comfort, safety and reliability for all your travel needs.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/starLuxe Charter" class="social-link" target="_blank" rel="noopener noreferrer">f</a>
+         
+        </div>
+        
+      
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#fleet">Our Fleet</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-links">
+        <h3>Legal</h3>
+        <ul>
+            <li><a href="terms-and-conditions.html">Terms & Conditions</a></li> 
+            <li><a href="privacy policy.html">Privacy Policy</a></li>
+        </ul>
+    </div>
+    
+    
+    <div class="copyright">
+      <p>&copy; 2025 Starluxe Exclusive. All rights reserved.</p>
+    </div>
+  </footer>
 
+  <!-- AOS animation -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+ 
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-quad',
+      once: true,
+      offset: 100
+    });
 
-    document.querySelectorAll('nav a').forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetPage = this.getAttribute('href').substring(1);
+    // Mobile Menu Toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
 
-        document.querySelectorAll('[id$="-page"]').forEach(page => {
-          page.style.display = 'none';
-        });
+    hamburger.addEventListener('click', function() {
+      this.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+      
+      // Toggle body scroll
+      if (mobileNav.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    });
 
-        document.getElementById(targetPage).style.display = 'block';
-       p
-        window.scrollTo(0, 0);
+    // Close mobile menu 
+    document.querySelectorAll('.mobile-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileNav.classList.remove('active');
+        document.body.style.overflow = '';
       });
     });
 
-    document.getElementById('home-page').style.display = 'block';
-  </script>
-</body>
-</html>
+    // Fleet Slideshow 
+    document.addEventListener('DOMContentLoaded', function() {
+      const slideshows = document.querySelectorAll('.slideshow-container');
+      
+      slideshows.forEach(slideshow => {
+        const slides = slideshow.querySelectorAll('.slide');
+        const dots = slideshow.querySelectorAll('.dot');
+        const prevBtn = slideshow.querySelector('.prev');
+        const nextBtn = slideshow.querySelector('.next');
+        let currentIndex = 0;
+        let interval;
+        
+        function showSlide(index) {
+          slides.forEach(slide => slide.classList.remove('active'));
+          dots.forEach(dot => dot.classList.remove('active'));
+          
+          currentIndex = (index + slides.length) % slides.length;
+          slides[currentIndex].classList.add('active');
+          dots[currentIndex].classList.add('active');
+        }
+        
+        function nextSlide() {
+          showSlide(currentIndex + 1);
+        }
+        
+        function prevSlide() {
+          showSlide(currentIndex - 1);
+        }
+        
+      
+        
+        function stopSlideShow() {
+          clearInterval(interval);
+        }
+        
+        // Navigation buttons
+        if (nextBtn) nextBtn.addEventListener('click', () => {
+          nextSlide();
+          stopSlideShow();
+          startSlideShow();
+        });
+        
+        if (prevBtn) prevBtn.addEventListener('click', () => {
+          prevSlide();
+          stopSlideShow();
+          startSlideShow();
+        });
+        
+        // Dot navigation
+        dots.forEach((dot, index) => {
+          dot.addEventListener('click', () => {
+            showSlide(index);
+            stopSlideShow();
+            startSlideShow();
+          });
+        });
+        
+        // Start slideshow
+        startSlideShow();
+        
+        // Pause on hover
+        slideshow.addEventListener('mouseenter', stopSlideShow);
+        slideshow.addEventListener('mouseleave', startSlideShow);
+      });
+    });
 
+    // Smooth scrolling 
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+  //See More 
+document.getElementById('seeMoreBtn').addEventListener('click', function() {
+  const hiddenVehicles = document.querySelectorAll('.additional-vehicle[style="display: none;"]');
+  
+  // Show next 2 hidden vehicles
+  for (let i = 0; i < Math.min(2, hiddenVehicles.length); i++) {
+    hiddenVehicles[i].style.display = 'block';
+    initVehicleSlideshow(hiddenVehicles[i]);
+    AOS.refresh();
+  }
+  
+  // Hide button 
+  if (document.querySelectorAll('.additional-vehicle[style="display: none;"]').length === 0) {
+    this.style.display = 'none';
+  }
+});
+
+//  slideshow for vehicle
+function initVehicleSlideshow(vehicle) {
+  const slideshow = vehicle.querySelector('.slideshow-container');
+  if (!slideshow) return;
+  
+  const slides = slideshow.querySelectorAll('.slide');
+  const dots = slideshow.querySelectorAll('.dot');
+  const prevBtn = slideshow.querySelector('.prev');
+  const nextBtn = slideshow.querySelector('.next');
+  let currentIndex = 0;
+  
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    currentIndex = (index + slides.length) % slides.length;
+    slides[currentIndex].classList.add('active');
+    dots[currentIndex].classList.add('active');
+  }
+  
+  if (prevBtn) prevBtn.addEventListener('click', () => showSlide(currentIndex - 1));
+  if (nextBtn) nextBtn.addEventListener('click', () => showSlide(currentIndex + 1));
+  
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => showSlide(index));
+  });
+  
+  showSlide(0);
+}
+
+// JavaScript for all vehicles
+document.addEventListener('DOMContentLoaded', function() {
+   
+    document.querySelectorAll('.vehicle-card:not(.additional-vehicle)').forEach(initVehicleSlideshow);
+    
+    // See More Button 
+    const seeMoreBtn = document.getElementById('seeMoreBtn');
+    if (seeMoreBtn) {
+        seeMoreBtn.addEventListener('click', function() {
+            const hiddenVehicles = Array.from(document.querySelectorAll('.additional-vehicle'))
+                .filter(v => window.getComputedStyle(v).display === 'none');
+            
+            // Show 2 at a time 
+            const toShow = Math.min(2, hiddenVehicles.length);
+            for (let i = 0; i < toShow; i++) {
+                hiddenVehicles[i].style.display = 'block';
+                initVehicleSlideshow(hiddenVehicles[i]);
+                AOS.refresh();
+            }
+            
+            // Hide button 2
+            if (document.querySelectorAll('.additional-vehicle[style="display: none"]').length === 0) {
+                this.style.display = 'none';
+            }
+        });
+    }
+    
+    // Search button Functionality
+    const searchInput = document.getElementById('vehicleSearch');
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            document.querySelectorAll('.vehicle-card').forEach(vehicle => {
+                const title = vehicle.querySelector('.vehicle-title').textContent.toLowerCase();
+                const features = vehicle.querySelector('.vehicle-features').textContent.toLowerCase();
+                vehicle.style.display = (title.includes(searchTerm) || features.includes(searchTerm)) 
+                    ? 'block' 
+                    : 'none';
+            });
+        });
+    }
+});
+
+function initVehicleSlideshow(vehicle) {
+    const slideshow = vehicle.querySelector('.slideshow-container');
+    if (!slideshow) return;
+    
+    const slides = slideshow.querySelectorAll('.slide');
+    const dots = slideshow.querySelectorAll('.dot');
+    const prevBtn = slideshow.querySelector('.prev');
+    const nextBtn = slideshow.querySelector('.next');
+    let currentIndex = 0;
+    
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        currentIndex = (index + slides.length) % slides.length;
+        slides[currentIndex].classList.add('active');
+        dots[currentIndex].classList.add('active');
+    }
+    
+    if (prevBtn) prevBtn.addEventListener('click', () => showSlide(currentIndex - 1));
+    if (nextBtn) nextBtn.addEventListener('click', () => showSlide(currentIndex + 1));
+    
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => showSlide(index));
+    });
+    
+    showSlide(0);
+}
+
+    //  slideshows for vehicles
+    function initVehicleSlideshow(vehicleElement) {
+        const slideshow = vehicleElement.querySelector('.slideshow-container');
+        if (!slideshow) return;
+        
+        const slides = slideshow.querySelectorAll('.slide');
+        const dots = slideshow.querySelectorAll('.dot');
+        const prevBtn = slideshow.querySelector('.prev');
+        const nextBtn = slideshow.querySelector('.next');
+        let currentIndex = 0;
+        
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            currentIndex = (index + slides.length) % slides.length;
+            slides[currentIndex].classList.add('active');
+            dots[currentIndex].classList.add('active');
+        }
+        
+        if (prevBtn) prevBtn.addEventListener('click', () => showSlide(currentIndex - 1));
+        if (nextBtn) nextBtn.addEventListener('click', () => showSlide(currentIndex + 1));
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => showSlide(index));
+        });
+        
+        showSlide(0);
+    }
+    
+    // Initialize all visible vehicle slideshows
+    document.querySelectorAll('.vehicle-card').forEach(vehicle => {
+        if (window.getComputedStyle(vehicle).display !== 'none') {
+            initVehicleSlideshow(vehicle);
+        }
+    });
+
+    // Search Functionality
+    const searchInput = document.getElementById('vehicleSearch');
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const vehicles = document.querySelectorAll('.vehicle-card');
+            
+            vehicles.forEach(vehicle => {
+                const title = vehicle.querySelector('.vehicle-title').textContent.toLowerCase();
+                const features = vehicle.querySelector('.vehicle-features').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || features.includes(searchTerm)) {
+                    vehicle.style.display = 'block';
+                } else {
+                    vehicle.style.display = 'none';
+                }
+            });
+        });
+    }
+    <!-- Deferred JS -->
+
+  // Load AOS animation 
+  function loadAOS() {
+    const script = document.createElement('script');
+    script.src = 'https://unpkg.com/aos@2.3.1/dist/aos.js';
+    script.onload = function() {
+      AOS.init({
+        duration: 800,
+        easing: 'ease-out-quad',
+        once: true,
+        offset: 100
+      });
+    };
+    document.body.appendChild(script);
+  }
+  
+  // Lazy load images
+  if ('IntersectionObserver' in window) {
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src || img.src;
+          img.removeAttribute('data-src');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+
+    lazyImages.forEach(img => {
+      if (img.dataset.src) {
+        imageObserver.observe(img);
+      }
+    });
+  }
+
+  // Load everything 
+  document.addEventListener('DOMContentLoaded', function() {
+    loadAOS();
+  
+  });
+
+
+fetch('/data/fleet.json')
+  .then(response => response.json())
+  .then(data => {
+    data.vehicles.forEach(vehicle => {
+  
+    });
+  });
+
+  // Form submission 
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const status = document.getElementById('form-status');
+    const submitBtn = form.querySelector('button[type="submit"]');
+    
+    // Disable button during submission
+    submitBtn.disabled = true;
+    status.textContent = 'Sending your message...';
+    status.style.color = 'inherit';
+    
+    // Simple POST request to Formspree
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+      if (response.ok) {
+        status.textContent = 'Message sent successfully! We will contact you shortly.';
+        status.style.color = 'var(--accent)';
+        form.reset();
+      } else {
+        throw new Error('Failed to send');
+      }
+    })
+    .catch(error => {
+      status.textContent = 'Error sending message. Please try again or call us directly.';
+      status.style.color = '#ff6b6b';
+    })
+    .finally(() => {
+      submitBtn.disabled = false;
+    });
+  });
+  fetch('/data/trust.json')
+    .then(response => response.json())
+    .then(data => {
+      const container = document.getElementById('trustBadges');
+      data.badges.forEach(badge => {
+        container.innerHTML += `
+          <img src="${badge.image}" 
+               alt="${badge.title}" 
+               width="${badge.width}" 
+               loading="lazy">`;
+      });
+    });
+
+</script>
+</body>
+</html> 
