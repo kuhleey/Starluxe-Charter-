@@ -196,13 +196,15 @@
     .hero {
       position: relative;
       width: 100%;
-      height: 100vh;
+      height: 70vh;
       margin-top: 80px;
       display: flex;
       align-items: center;
       text-align: center;
       color: var(--white);
       overflow: hidden;
+      min-height: 70vh;
+      padding: 20px;
     }
 
     .hero-bg {
@@ -618,6 +620,7 @@
 
     .contact-info {
       padding-right: 2rem;
+      
     }
 
     .contact-info h2 {
@@ -629,16 +632,25 @@
       margin-bottom: 2rem;
       opacity: 0.9;
       line-height: 1.7;
+   
     }
 
     .contact-details {
       margin-top: 3rem;
+    
+     
+    
     }
 
     .contact-item {
       display: flex;
       align-items: flex-start;
       margin-bottom: 1.5rem;
+ 
+    
+    }
+    .contact-details a{
+      color: #FFD700;
     }
 
     .contact-icon {
@@ -846,6 +858,7 @@
       .contact-info {
         padding-right: 0;
         margin-bottom: 3rem;
+     
       }
     }
 
@@ -884,6 +897,16 @@
         min-height: 300px;
       }
     }
+    @media (max-width: 400px) {
+  .hero {
+    min-height: 50vh;
+    margin-top: 20px;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+}
   </style>
 </head>
 <body>
@@ -892,7 +915,7 @@
     <div class="container">
       <div class="header-content">
         <div class="logo">
-          <img src="Gallery/starluxe logo.jpeg" loading="lazy" alt="Starluxe Exclusive Logo">
+          <img src="Gallery/Starluxe_logo.webp" loading="lazy" alt="Starluxe Exclusive Logo">
         </div>
         
         <nav class="desktop-nav">
@@ -927,7 +950,7 @@
   <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="hero-bg">
-      <img src="Gallery/BUS (2).webp" loading="lazy" alt="Luxury Coach on Scenic Route">
+      <img src="Gallery/BUS (2)-webp" loading="lazy" alt="Luxury Coach on Scenic Route">
     </div>
     <div class="hero-overlay"></div>
     
@@ -976,7 +999,7 @@
           <a href="Our legacy.html" class="btn btn-outline">Read Full Story</a>
         </div>
         <div class="about-image" data-aos="fade-left">
-          <img src="Gallery/dRIVERS.avif" loading="lazy" alt="Our Professional Drivers">
+          <img src="Gallery/dRIVERS-avif" loading="lazy" alt="Our Professional Drivers">
         </div>
       </div>
     </div>
@@ -1066,7 +1089,7 @@
           <div class="vehicle-card" data-aos="fade-up" data-aos-delay="100">
             <div class="slideshow-container">
               <button class="slide-nav prev">&lt;</button>
-              <img class="slide active" src="Gallery/7 seater.jpeg" loading="lazy" alt="Luxury Minibus">
+              <img class="slide active" src="Gallery/7 seater-jpeg" loading="lazy" alt="Luxury Minibus">
               <img class="slide" src="Gallery/VW KOMBI INTERIOR.jpg" loading="lazy" alt="Interior">
               <img class="slide" src="Gallery/VW KOMBI.jpg" loading="lazy" alt="Seats">
               <button class="slide-nav next">&gt;</button>
@@ -1095,9 +1118,9 @@
           <div class="vehicle-card" data-aos="fade-up" data-aos-delay="200">
             <div class="slideshow-container">
               <button class="slide-nav prev">&lt;</button>
-              <img class="slide active" src="Gallery/36 AND 39 SEATER.jpg" loading="lazy" alt="Luxury Coach">
-              <img class="slide" src="Gallery/39 seater charging ports.jpg" loading="lazy" alt="Seats">
-              <img class="slide" src="Gallery/39 seater inside.jpg" loading="lazy" alt="Restroom">
+              <img class="slide active" src="Gallery/36 AND 39 SEATER-jpg" loading="lazy" alt="Luxury Coach">
+              <img class="slide" src="Gallery/39 seater inside-jpg" loading="lazy" alt="Seats">
+              <img class="slide" src="Gallery/39 seater restroom-jpg" loading="lazy" alt="Restroom">
               <button class="slide-nav next">&gt;</button>
               <div class="dots-container">
                 <span class="dot active"></span>
@@ -1149,8 +1172,8 @@
           <div class="vehicle-card additional-vehicle" style="display:none">
             <div class="slideshow-container">
               <button class="slide-nav prev">&lt;</button>
-              <img class="slide active" src="Gallery/c-class 2.jpg" loading="lazy" alt="Luxury Sedan">
-              <img class="slide" src="Gallery/c-class.jpg" loading="lazy" alt="Interior">
+              <img class="slide active" src="Gallery/c-class -2.jpg" loading="lazy" alt="Luxury Sedan">
+              <img class="slide" src="Gallery/C-class-1.jpg" loading="lazy" alt="Interior">
               <button class="slide-nav next">&gt;</button>
               <div class="dots-container">
                 <span class="dot active"></span>
@@ -1158,7 +1181,7 @@
               </div>
             </div>
             <div class="vehicle-content">
-              <h3 class="vehicle-title">Special Request/VIP</h3>
+              <h3 class="vehicle-title">Chauffeur services</h3>
               <strong>Vehicles:</strong>
               <li>Mercedes Benz C-Class</li>
               <ul class="vehicle-features">
@@ -1213,8 +1236,17 @@
                 </a>
               </div>
             </div>
+                <div class="contact-item">
+                  <div class="contact-icon"><i class="fa-solid fa-message"></i></div>
+                  <div>
+                    <h4>WhatsApp</h4>
+                    <a href="https://wa.me/27716747042" target="_blank">071 674 7042</a>
+                  </div>
+              </div>
+            </div>
           </div>
         </div>
+       
         
         <div class="contact-form">
           <form id="contactForm" action="https://formspree.io/f/mpwrgbnj" method="POST">
@@ -1244,7 +1276,7 @@
                 <option value="Mini Buses">Mini Buses (7/14/22-seater)</option>
                 <option value="Mid-Size Buses">Mid-Size Buses (36/39-seater)</option>
                 <option value="Sedans">Almera Sedans</option>
-                <option value="Special Request">Special Request/VIP</option>
+                <option value="Chauffeur services">Chauffeur services</option>
               </select>
             </div>
             
@@ -1303,7 +1335,7 @@
       <div class="footer-content">
         <div class="footer-about">
           <div class="footer-logo">
-            <img src="Gallery/starluxe logo.jpeg" loading="lazy" alt="Starluxe Exclusive">
+            <img src="Gallery/Starluxe_logo.webp" loading="lazy" alt="Starluxe Exclusive">
           </div>
           <p>Premium coach transportation services across South Africa, offering comfort, safety and reliability for all your travel needs.</p>
           <div class="social-links">
